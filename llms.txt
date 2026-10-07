@@ -1,0 +1,24 @@
+# sovereign.wiki
+
+> The sovereign data moat — open-source and science, eaten daily, fed to the hives.
+
+## What this is
+- 530 crown-jewel MCP packages on PyPI (`pip install meok-cj-<name>`) — each with agent-card.json, llms.txt, mcp.json, MCP+A2A+HTTP+Sigil protocols, Ed25519 attestation
+- The AI Governance Map: SOV3/OOWM apex → 12 Generals BFT council (7/12 quorum) → 15 regulatory frameworks → 28 hives → Layer 0
+- 12 sovereign brain configs: King, Queen, Quant, Man, OOWM, MOM, Small MoE, Big MoE, Bridge, Council, Sovereign, Free
+- Daily ingestion engine (04:00 UTC): GitHub awesome-lists + arXiv CS.AI/CS.LG + open government data → SOV3 memory → OLM brain → Sigil ledger → town feed → this catalog
+
+## Ecosystem
+- CSOAI (AI safety / EU AI Act / ISO 42001): https://csoai.org
+- Council of AI (33-agent BFT Council): https://councilof.ai
+- MEOK (sovereign AI compliance infrastructure): https://meok.ai
+- ProofOf.AI (attestation & notary): https://proofof.ai
+
+## Machine endpoints
+- Agent card: /.well-known/agent-card.json
+- This file: /llms.txt
+- Sitemap: /sitemap.xml
+- Robots: /robots.txt
+
+## Principles
+Sovereign by design — audit-grade, signed, neutral. Measurement credentials, never certification theatre. UK-sovereign, AUKUS-compatible.

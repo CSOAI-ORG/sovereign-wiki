@@ -1,0 +1,20 @@
+{
+  "name": "sovereign-wiki",
+  "display_name": "sovereign.wiki — Sovereign Data Moat",
+  "description": "The sovereign data moat: 530 crown-jewel MCP packages, the AI Governance Map, 12 sovereign brain configs, and a daily open-source + science ingestion engine feeding all MEOK/CSOAI hives.",
+  "url": "https://sovereign.wiki",
+  "vendor": "MEOK AI Labs",
+  "company": "CSOAI Ltd (UK 16939677)",
+  "version": "1.0.0",
+  "protocols": ["MCP", "A2A", "HTTP", "Sigil"],
+  "attestation": "Ed25519-signed",
+  "layer0": true,
+  "sovereign": true,
+  "jurisdiction": "UK",
+  "related": {
+    "csoai": "https://csoai.org",
+    "councilof": "https://councilof.ai",
+    "meok": "https://meok.ai",
+    "proofof": "https://proofof.ai"
+  }
+}
