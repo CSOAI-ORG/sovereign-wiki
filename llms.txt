@@ -22,3 +22,4 @@
 
 ## Principles
 Sovereign by design — audit-grade, signed, neutral. Measurement credentials, never certification theatre. UK-sovereign, AUKUS-compatible.
+- https://sovereign.wiki/x402/ — 31 live x402 measurement doors (27 priced from $0.01 USDC Base; prices live only in the 402 challenge)
