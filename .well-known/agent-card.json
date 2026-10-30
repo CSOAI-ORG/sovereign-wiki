@@ -2,7 +2,7 @@
   "name": "sovereign-wiki",
   "display_name": "Council of AI source catalogue",
   "description": "Static research software references and routes to Council of AI measurements, methods, signed evidence and free verification.",
-  "url": "https://sovereign.wiki",
+  "url": "https://csoai-org.github.io/sovereign-wiki",
   "vendor": "Council of AI",
   "company": "CSOAI Ltd (UK 16939677)",
   "version": "1.1.0",

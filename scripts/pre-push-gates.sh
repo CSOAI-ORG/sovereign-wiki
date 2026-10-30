@@ -7,7 +7,8 @@ FAIL=0
 say() { echo "[gate] $*"; }
 bad() { echo "[gate][FAIL] $*"; FAIL=1; }
 
-cd "$(git rev-parse --show-toplevel)" || exit 1
+task_repo_root="$(git rev-parse --show-toplevel)" || exit 1
+cd "$task_repo_root" || exit 1
 
 # 1. Required Layer 0 files exist and are non-trivial
 for f in index.html llms.txt robots.txt sitemap.xml .well-known/agent-card.json; do
@@ -23,18 +24,43 @@ python3 -c "import json; c=json.load(open('.well-known/agent-card.json')); asser
   && say "agent-card ok" || bad "agent-card.json invalid"
 
 # 4. sitemap parses and points at this host
-python3 -c "import xml.etree.ElementTree as ET; t=ET.parse('sitemap.xml'); locs=[e.text for e in t.iter() if e.tag.endswith('loc')]; assert locs and all('sovereign.wiki' in l for l in locs), 'bad sitemap'" \
-  && say "sitemap ok ($(grep -c '<loc>' sitemap.xml) urls)" || bad "sitemap.xml invalid"
+python3 -c "import xml.etree.ElementTree as ET; t=ET.parse('sitemap.xml'); locs=[e.text for e in t.iter() if e.tag.endswith('loc')]; assert locs and all(l.startswith('https://csoai-org.github.io/sovereign-wiki/') for l in locs), 'bad sitemap'" \
+  && say "sitemap ok" || bad "sitemap.xml invalid"
 
 # 5. robots references the sitemap
-grep -q "Sitemap: https://sovereign.wiki/sitemap.xml" robots.txt && say "robots ok" || bad "robots.txt sitemap ref missing"
+grep -q "Sitemap: https://csoai-org.github.io/sovereign-wiki/sitemap.xml" robots.txt && say "robots ok" || bad "robots.txt sitemap ref missing"
 
-# 6. Secret-leak scan across the published tree
-if grep -rInE "(gho_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|-----BEGIN (RSA|OPENSSH|EC) PRIVATE KEY)" \
-    index.html llms.txt robots.txt sitemap.xml .well-known/ 2>/dev/null | head -5; then
-  bad "possible secret in published content (see above)"
+# 6. Check every published content page and discovery file. Never echo matched values.
+# A grep | head pipeline can report a false clean result after grep receives SIGPIPE.
+if python3 - <<'SCAN'
+from pathlib import Path
+import re, sys
+roots = [Path(p) for p in ('index.html', 'llms.txt', 'robots.txt', 'sitemap.xml', '.well-known', 'crown-jewels', 'x402')]
+pattern = re.compile(r'(gho_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|-----BEGIN (RSA|OPENSSH|EC) PRIVATE KEY)')
+failed = False
+for root in roots:
+    if not root.exists():
+        print(f'[scan] missing required content path: {root}')
+        failed = True
+        continue
+    for path in sorted(root.rglob('*')) if root.is_dir() else [root]:
+        if not path.is_file():
+            continue
+        try:
+            text = path.read_text(encoding='utf-8')
+        except (OSError, UnicodeError):
+            print(f'[scan] could not inspect: {path}')
+            failed = True
+            continue
+        if pattern.search(text):
+            print(f'[scan] possible secret marker in: {path}')
+            failed = True
+sys.exit(1 if failed else 0)
+SCAN
+then
+  say "secret-scan clean (published content paths)"
 else
-  say "secret-scan clean"
+  bad "published content secret scan failed; matched values withheld"
 fi
 
 # 7. External ecosystem links present (one-door consistency)
@@ -49,3 +75,4 @@ if [ "$FAIL" -eq 0 ]; then
 fi
 echo "[gate] FAILED — push blocked"
 exit 1
+

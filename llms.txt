@@ -7,9 +7,9 @@ Council of AI — Council for the Safety of Artificial Intelligence. Operated by
 This site is a static source catalogue. It does not execute tasks or process payments.
 
 ## Start here
-- Source catalogue: https://sovereign.wiki/
-- Research software references: https://sovereign.wiki/crown-jewels/
-- Evidence services and API access: https://sovereign.wiki/x402/
+- Source catalogue: https://csoai-org.github.io/sovereign-wiki/
+- Research software references: https://csoai-org.github.io/sovereign-wiki/crown-jewels/
+- Evidence services and API access: https://csoai-org.github.io/sovereign-wiki/x402/
 - Source and corrections: https://github.com/CSOAI-ORG/sovereign-wiki
 
 ## Current Council evidence
@@ -35,8 +35,8 @@ Measurement applies to its named system, method, inputs and observation period. 
 A catalogue reference does not establish ownership, endorsement, a completed integration or a security review. Check upstream provenance and licences before reuse.
 
 ## Discovery
-- Metadata: https://sovereign.wiki/.well-known/agent-card.json
-- Sitemap: https://sovereign.wiki/sitemap.xml
-- Robots: https://sovereign.wiki/robots.txt
+- Metadata: https://csoai-org.github.io/sovereign-wiki/.well-known/agent-card.json
+- Sitemap: https://csoai-org.github.io/sovereign-wiki/sitemap.xml
+- Robots: https://csoai-org.github.io/sovereign-wiki/robots.txt
 
 Copy reviewed: 2026-10-30. Package identifiers and existing public paths are retained.

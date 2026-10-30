@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://sovereign.wiki/sitemap.xml
+Sitemap: https://csoai-org.github.io/sovereign-wiki/sitemap.xml
+
