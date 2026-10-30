@@ -1,82 +1,38 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>sovereign.wiki — 31 live x402 measurement doors</title>
-<meta name="description" content="31 live HTTP-402 doors from the Council of AI: metered, signed, offline-verifiable measurement credentials — 27 priced from $0.01 USDC on Base, 4 free, verification free forever.">
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evidence services and API access — Council of AI source catalogue</title>
+<meta name="description" content="Find Council of AI evidence services, current API terms and free verification. Read the live endpoint response for availability, price and payment requirements.">
 <link rel="canonical" href="https://sovereign.wiki/x402/">
+<meta property="og:title" content="Evidence services and API access — Council of AI source catalogue"><meta property="og:description" content="Find Council of AI evidence services, current API terms and free verification. Read the live endpoint response for availability, price and payment requirements."><meta property="og:type" content="website"><meta property="og:url" content="https://sovereign.wiki/x402/"><meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Evidence services and API access — Council of AI source catalogue", "description": "Find Council of AI evidence services, current API terms and free verification. Read the live endpoint response for availability, price and payment requirements.", "url": "https://sovereign.wiki/x402/", "isPartOf": {"@type": "WebSite", "name": "Council of AI source catalogue", "url": "https://sovereign.wiki/"}, "publisher": {"@type": "Organization", "name": "Council of AI", "legalName": "CSOAI Ltd", "url": "https://councilof.ai/"}}</script>
 <style>
-:root{--bg:#0b0e14;--card:#121722;--line:#1f2634;--fg:#e8ecf4;--mut:#93a0b4;--acc:#5eead4;--gold:#fbbf24}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
-.wrap{max-width:56rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
-a{color:var(--acc)}h1{font-size:2rem;line-height:1.2;margin:.2rem 0 .5rem}h2{font-size:1.25rem;margin:2.2rem 0 .6rem;color:var(--gold)}
-.k{color:var(--mut);font-size:.92rem;letter-spacing:.04em;text-transform:uppercase}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.75rem;margin:1.2rem 0}
-.tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem}
-.tile b{display:block;font-size:1.45rem;color:var(--acc)}.tile span{color:var(--mut);font-size:.85rem}
-table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:.92rem}
-th,td{padding:.55rem .7rem;border-bottom:1px solid var(--line);text-align:left}th{color:var(--gold);font-weight:600}
-tr:last-child td{border-bottom:none}
-code,pre{background:#0e1320;border:1px solid var(--line);border-radius:6px;font-size:.85rem}
-code{padding:.1rem .35rem}pre{padding:.7rem .9rem;overflow-x:auto}
-.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:8px;padding:.8rem 1rem;margin:1rem 0;font-size:.95rem}
-.warn{border-left-color:var(--gold)}
-footer{margin-top:2.5rem;color:var(--mut);font-size:.85rem;border-top:1px solid var(--line);padding-top:1rem}
-</style>
-</head>
-<body>
-<div class="wrap">
-<p class="k">sovereign.wiki · discovery</p>
-<h1>31 live x402 measurement doors</h1>
-<p>The Council of AI's metered surface, as it answers <em>right now</em>: every door speaks HTTP 402 with an exact-scheme USDC offer on Base. Settle one and you receive a <b>signed, offline-verifiable measurement credential</b> — or inspect the free preview before you pay a wei. Verification of anything we issue is free forever.</p>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0a0e17;color:#e2e8f0;line-height:1.65}
+.c{max-width:920px;margin:0 auto;padding:2.5rem 1.5rem}
+h1{color:#c9a84c;font-size:2.1rem;margin-bottom:.4rem;letter-spacing:-.5px}
+h2{color:#c9a84c;font-size:1.25rem;margin:2.4rem 0 .8rem;border-bottom:1px solid #1e2638;padding-bottom:.4rem}
+h3{color:#e2e8f0;font-size:1rem;margin:1.2rem 0 .4rem}
+.sub{opacity:.75;font-size:1.02rem;margin-bottom:1.6rem}
+.n{font-size:3.4rem;font-weight:800;color:#c9a84c;line-height:1.1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.9rem;margin:.9rem 0}
+.card{background:#111827;border:1px solid #1e2638;border-radius:10px;padding:.95rem 1.05rem}
+.card b{color:#c9a84c;display:block;margin-bottom:.25rem}
+.card small{opacity:.7}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin:.7rem 0}
+th,td{border:1px solid #1e2638;padding:.45rem .6rem;text-align:left}
+th{background:#111827;color:#c9a84c}
+code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.86em;background:#111827;padding:.1rem .35rem;border-radius:4px;color:#9ae6b4}
+a{color:#c9a84c;text-decoration:none}
+a:hover{text-decoration:underline}
+.note{background:#111827;border-left:3px solid #c9a84c;padding:.7rem 1rem;border-radius:0 8px 8px 0;font-size:.92rem;margin:1rem 0}
+footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid #1e2638;opacity:.65;font-size:.83rem}
 
-<div class="grid">
-<div class="tile"><b>31</b><span>doors live on the x402 rail (402 verified 11 Oct 2026)</span></div>
-<div class="tile"><b>27</b><span>priced doors — 24 × $0.01 · 3 × $0.02</span></div>
-<div class="tile"><b>4</b><span>free zero-challenge doors (settles at $0)</span></div>
-<div class="tile"><b>7/7</b><span>Layer-0 agent surface (only LMArena matches)</span></div>
-</div>
-
-<h2>How a purchase works</h2>
-<pre>1. GET  https://councilof.ai/api/request-attestation?subject=...
-        → HTTP 402 + {scheme:"exact", network:"eip155:8453", amount, payTo}
-2. PAY  USDC on Base to the payTo in the challenge (x402 v2 exact scheme)
-3. RETRY with PAYMENT-SIGNATURE → signed card-v0 credential + receipt
-4. VERIFY offline later: Ed25519 signature + merkle inclusion against
-        https://councilof.ai/root.json  ·  /signed/card_index.json</pre>
-
-<h2>The catalogue</h2>
-<table>
-<tr><th>SKU</th><th>Doors</th><th>Representative routes</th></tr>
-<tr><td><b>issuance</b></td><td>11 paid</td><td>/api/request-attestation · /api/measurement/fresh-capsule · /api/wrapper/asset/* · /api/ras/* · /api/rwa/evidence</td></tr>
-<tr><td><b>assembly</b></td><td>16 paid</td><td>/api/evidence-bundle?obligation=article-50 · /api/proof?bundle=1 · /api/pop/* · /api/receipts/batch · /api/art50/marking-evidence</td></tr>
-<tr><td><b>free</b></td><td>4 zero-challenge</td><td>/api/free-door (board totals + root) · /api/discover/chainlink · /api/discover/ondo · /api/discover/ondo-ousg</td></tr>
-</table>
-
-<div class="note">
-<b>Prices live only in the 402 challenge — never on a page.</b> That is deliberate: the machine-readable challenge is the single source of truth, so no marketing copy can drift from what you are actually charged. The current ladder: promo window <b>$0.01</b> (24 doors) and <b>$0.02</b> (3 doors) in USDC on Base; the free doors settle at zero.
-</div>
-
-<div class="note warn">
-<b>Measurement, not certification.</b> A paid door buys a signed measurement credential — an instrumented observation, MEASURED or UNMEASURED, with the instrument set named. It is not a conformity assessment, accreditation, or seal. We take no money from anything we rank.
-</div>
-
-<h2>Machine-readable entry points</h2>
-<table>
-<tr><th>Artifact</th><th>URL</th></tr>
-<tr><td>x402 door manifest (31 doors, full offers)</td><td><code>councilof.ai/.well-known/x402.json</code></td></tr>
-<tr><td>Buyer guide (human)</td><td><code>councilof.ai/pay</code></td></tr>
-<tr><td>API contract (OpenAPI, 12 paths)</td><td><code>councilof.ai/openapi.json</code></td></tr>
-<tr><td>Live measurement board</td><td><code>councilof.ai/api/gspc</code></td></tr>
-<tr><td>Signed card index + root</td><td><code>councilof.ai/signed/card_index.json</code> · <code>councilof.ai/root.json</code></td></tr>
-<tr><td>Agent surfaces</td><td><code>/.well-known/agent-card.json</code> · <code>/llms.txt</code> · <code>/.well-known/mcp/server-card.json</code></td></tr>
-</table>
-
-<footer>
-CSOAI Ltd (UK Companies House 16939677) · independent measurement body · measurement, not certification.<br>
-Figures probed live 11 Oct 2026 against <code>.well-known/x402.json</code> and the 31 door endpoints (31/31 answered 402). Revenue and settlement counters: <code>councilof.ai/api/revenue</code>.
-</footer>
-</div>
-</body>
-</html>
+nav{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:1.8rem}a:focus-visible{outline:2px solid #fff;outline-offset:4px}.skip{position:absolute;left:-10000px}.skip:focus{position:static}p{margin:.6rem 0}li{margin:.35rem 0}ul,ol{padding-left:1.4rem}td,code{overflow-wrap:anywhere}caption{text-align:left;margin:.5rem 0}.table-wrap{overflow-x:auto}.sub{opacity:1;color:#b8c4d6}footer{opacity:1;color:#aebbd0}</style></head>
+<body><a class="skip" href="#main">Skip to content</a><div class="c"><nav aria-label="Main navigation"><a href="../">Source catalogue</a><a href="../crown-jewels/">Research software</a><a href="../x402/">Evidence services</a><a href="https://councilof.ai/">Council of AI</a></nav><main id="main">
+<h1>Evidence services and API access</h1><p class="sub">Find a service, inspect its current terms and verify the evidence you receive.</p>
+<p>Council of AI publishes measurement records and evidence interfaces. Start with the <a href="https://councilof.ai/pay">buyer guide</a>, the <a href="https://councilof.ai/.well-known/x402.json">x402 discovery manifest</a> and the <a href="https://councilof.ai/openapi.json">API specification</a>.</p>
+<h2>Before authorising a purchase</h2><ol><li>Choose the documented endpoint and read its scope, required inputs and expected output.</li><li>Inspect its current response. Where payment is required, use the returned HTTP 402 challenge for the amount, network, asset and recipient.</li><li>Authorise only the terms you intend to accept. Retain the request, response and receipt so the transaction and evidence can be checked.</li><li>Verify the returned record against the relevant published keys, root and inclusion data. Read any limitations and unmeasured fields.</li></ol>
+<p>Availability and payment terms can change. Historical endpoint counts and promotional prices are not current quotes.</p>
+<h2>Inspect published evidence</h2><ul><li><a href="https://councilof.ai/api/gspc">Current measurement status</a></li><li><a href="https://councilof.ai/signed/card_index.json">Signed card index</a></li><li><a href="https://councilof.ai/root.json">Published root</a></li><li><a href="https://councilof.ai/verify">Free verification</a></li><li><a href="https://councilof.ai/methodology/">Measurement methodology</a></li></ul>
+<h2>What the service provides</h2><p>Read the selected service's documented deliverable before purchase. Measurement evidence describes an observation within its stated scope. It is not accreditation, a conformity assessment or a guarantee of safety. Payment does not establish the result of a measurement.</p>
+<h2>Connect an application</h2><p>Use the <a href="https://councilof.ai/.well-known/agent-card.json">Council discovery card</a>, <a href="https://councilof.ai/llms.txt">machine-readable overview</a> and <a href="https://councilof.ai/.well-known/mcp/server-card.json">MCP server card</a> to find current interfaces. This catalogue itself serves static discovery content and does not execute tasks or process payments.</p></main><footer><p>Council of AI — Council for the Safety of Artificial Intelligence. Operated by CSOAI Ltd, UK company 16939677.</p><p>Catalogue copy reviewed 30 October 2026. Current measurement status is published on the linked evidence surfaces.</p><p><a href="../llms.txt">Machine-readable overview</a> · <a href="../.well-known/agent-card.json">Discovery metadata</a> · <a href="../sitemap.xml">Sitemap</a> · <a href="https://github.com/CSOAI-ORG/sovereign-wiki">Source and corrections</a></p></footer></div></body></html>

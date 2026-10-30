@@ -1,25 +1,42 @@
-# sovereign.wiki
+# Council of AI source catalogue — sovereign.wiki
 
-> The sovereign data moat — open-source and science, eaten daily, fed to the hives.
+> Research software references and routes to published AI-behaviour measurements, methods, signed evidence and free verification.
 
-## What this is
-- 530 crown-jewel MCP packages on PyPI (`pip install meok-cj-<name>`) — each with agent-card.json, llms.txt, mcp.json, MCP+A2A+HTTP+Sigil protocols, Ed25519 attestation
-- The AI Governance Map: SOV3/OOWM apex → 12 Generals BFT council (7/12 quorum) → 15 regulatory frameworks → 28 hives → Layer 0
-- 12 sovereign brain configs: King, Queen, Quant, Man, OOWM, MOM, Small MoE, Big MoE, Bridge, Council, Sovereign, Free
-- Daily ingestion engine (04:00 UTC): GitHub awesome-lists + arXiv CS.AI/CS.LG + open government data → SOV3 memory → OLM brain → Sigil ledger → town feed → this catalog
+## Identity
+Council of AI — Council for the Safety of Artificial Intelligence. Operated by CSOAI Ltd, UK company 16939677.
+This site is a static source catalogue. It does not execute tasks or process payments.
 
-## Ecosystem
-- CSOAI (AI safety / EU AI Act / ISO 42001): https://csoai.org
-- Council of AI (33-agent BFT Council): https://councilof.ai
-- MEOK (sovereign AI compliance infrastructure): https://meok.ai
-- ProofOf.AI (attestation & notary): https://proofof.ai
+## Start here
+- Source catalogue: https://sovereign.wiki/
+- Research software references: https://sovereign.wiki/crown-jewels/
+- Evidence services and API access: https://sovereign.wiki/x402/
+- Source and corrections: https://github.com/CSOAI-ORG/sovereign-wiki
 
-## Machine endpoints
-- Agent card: /.well-known/agent-card.json
-- This file: /llms.txt
-- Sitemap: /sitemap.xml
-- Robots: /robots.txt
+## Current Council evidence
+- Measurement board: https://councilof.ai/gspc-scoreboard
+- Machine-readable status: https://councilof.ai/api/gspc
+- Methods: https://councilof.ai/methodology/
+- Verification: https://councilof.ai/verify
+- Signed card index: https://councilof.ai/signed/card_index.json
+- Published root: https://councilof.ai/root.json
+- Buyer guide: https://councilof.ai/pay
+- Service discovery: https://councilof.ai/.well-known/x402.json
+- API specification: https://councilof.ai/openapi.json
 
-## Principles
-Sovereign by design — audit-grade, signed, neutral. Measurement credentials, never certification theatre. UK-sovereign, AUKUS-compatible.
-- https://sovereign.wiki/x402/ — 31 live x402 measurement doors (27 priced from $0.01 USDC Base; prices live only in the 402 challenge)
+## Related surfaces
+- Council of AI: https://councilof.ai/
+- Related public identity: https://csoai.org/
+- MEOK product: https://meok.ai/
+- ProofOf.AI: https://proofof.ai/
+
+## Interpretation
+Use live evidence for current counts and coverage. Read the selected endpoint's current response for availability and payment terms.
+Measurement applies to its named system, method, inputs and observation period. A signature verifies origin and integrity; it does not establish regulatory compliance or safety.
+A catalogue reference does not establish ownership, endorsement, a completed integration or a security review. Check upstream provenance and licences before reuse.
+
+## Discovery
+- Metadata: https://sovereign.wiki/.well-known/agent-card.json
+- Sitemap: https://sovereign.wiki/sitemap.xml
+- Robots: https://sovereign.wiki/robots.txt
+
+Copy reviewed: 2026-10-30. Package identifiers and existing public paths are retained.
